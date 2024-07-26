@@ -40,5 +40,5 @@ app.listen(PORT, () => {
 
 // Jika Anda ingin menangani rute dasar, tambahkan ini
 app.get('/', (req, res) => {
-  res.send('Hello welcom API Ilham Jul Aiman');
+  res.send('Hello welcome API Ilham Jul Aiman');
 });
