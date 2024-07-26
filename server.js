@@ -3,7 +3,6 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 require('dotenv').config();
 
-
 // Tambahkan log ini untuk memverifikasi bahwa variabel lingkungan dimuat dengan benar
 console.log('MONGO_URI:', process.env.MONGO_URI);
 console.log('PORT:', process.env.PORT);
@@ -37,4 +36,9 @@ mongoose.connect(process.env.MONGODB_URI || 'mongodb+srv://IlhamZul:ALST3vUl6e0Q
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`Server berjalan di port ${PORT}`);
+});
+
+// Jika Anda ingin menangani rute dasar, tambahkan ini
+app.get('/', (req, res) => {
+  res.send('Hello welcom API Ilham Jul Aiman');
 });
